@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <report
+            id="onlife_account_invoice2"
+            string="FACTURA ONLIFE"
+            model="account.move"
+            report_type="qweb-pdf"
+            file="onlife.reporte_account_invoice1"
+            name="onlife.reporte_account_invoice1"
+        />
+
+    </data>
+</odoo>
