@@ -2,7 +2,7 @@
 
 from odoo import api, models
 import re
-import odoo.addons.l10n_gt_extra.a_letras
+import odoo.addons.l10n_sv.a_letras
 import logging
 
 class ReportAbstractInvoice(models.AbstractModel):
