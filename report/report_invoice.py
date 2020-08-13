@@ -148,7 +148,7 @@ class ReportAbstractInvoice(models.AbstractModel):
             'doc_ids': docids,
             'doc_model': self.model,
             'docs': docs,
-            'a_letras': odoo.addons.l10n_gt_extra.a_letras,
+            'a_letras': odoo.addons.l10n_sv.a_letras,
             'total_descuento': self.total_descuento,
             'producto': self.producto,
             'producto_completo': self.producto_completo,
