@@ -6,62 +6,61 @@
                 <div class="article">
                     <div class="page">
 
-                        <div style="position: absolute; top: 5.7cm; left: 17cm; font-size: 100%">
-                            <span t-esc="o.invoice_date.day if o.invoice_date else ''"/>  /
+                        <div style="position: absolute; top: 4.4cm; left: 23cm; font-size: 90%">
+                            <span t-esc="o.invoice_date.day if o.invoice_date else ''"/>
                         </div>
-                        <div style="position: absolute; top: 5.7cm; left: 18cm; font-size: 100%">
-                            <span t-esc="o.invoice_date.month if o.invoice_date else ''"/>  /
+                        <div style="position: absolute; top: 4.4cm; left: 25cm; font-size: 90%">
+                            <span t-esc="o.invoice_date.month if o.invoice_date else ''"/>
                         </div>
-                        <div style="position: absolute; top: 5.7cm; left: 19cm; font-size: 100%">
+                        <div style="position: absolute; top: 4.4cm; left: 26.2cm; font-size: 90%">
                             <span t-esc="o.invoice_date.year if o.invoice_date else ''"/>
                         </div>
 
-                        <div style="position: absolute; top: 6.4cm; left: 3.5cm; font-size: 110%">
+                        <div style="position: absolute; top: 3.7cm; left: 2.5cm; font-size: 90%">
                             <span style="font-family: monospace!important" t-field="o.partner_id.name"/>
                         </div>
-
-                        <div style="position: absolute; top: 8cm; left: 6cm; font-size: 110%">
-                            <span t-field="o.partner_id.vat"/>
-                        </div>
-                        <div style="position: absolute; top: 7.2cm; left: 4.2cm; font-size: 90%; width: 9cm">
-                            <span t-esc="o.partner_id.street"/>
-                        </div>
-
-
-                        <div style="font-size: 90%; text-transform: uppercase; position: absolute; top: 7.2cm; left: 18.5cm">
-                            <span t-esc="o.partner_id.state_id.name if o.partner_id.state_id else ''"/>
-                        </div>
-
-
-                        <div style="position: absolute; top: 8cm; left: 19cm; font-size: 100%; width: 7cm">
-                        <span t-field="o.invoice_payment_term_id.name"/>
-                        </div>
-                        <div style="position: absolute; top: 3.7cm; left: 2.7cm; font-size: 100%; width: 15cm">
+                        <div style="position: absolute; top: 3.7cm; left: 11cm; font-size: 90%; width: 14.5cm">
                             <span t-field="o.partner_id.numero_registro"/>
                         </div>
-                        <div style="position: absolute; top: 3.7cm; left: 5.7cm; font-size: 100%; width: 15cm">
-                            <span t-field="o.partner_id.giro_negocio_id"/>
+
+                        <div style="position: absolute; top: 3.7cm; left: 16cm; font-size: 90%">
+                            <span t-field="o.partner_id.vat"/>
                         </div>
+                        <div style="position: absolute; top: 4.4cm; left: 10cm; font-size: 90%; width: 8cm">
+                            <span t-esc="o.partner_id.street"/>
+                        </div>
+                        <div style="position: absolute; top: 4.4cm; left: 2.5cm; font-size: 90%; width: 9cm">
+                            No.ident
+                        </div>                        
+
+                        <div style="font-size: 90%; text-transform: uppercase; position: absolute; top: 4.4cm; left: 15cm">
+                            departamento
+                        </div>
+                        
+                        
 
 
 
 
 
-                        <div style="position: absolute; top: 10cm; left: 2cm">
+                        <div style="position: absolute; top: 6.6cm; left: 1cm">
                             <table>
                                 <tbody>
                                     <tr t-foreach="o.invoice_line_ids" t-as="l">
-                                        <td style="width: 4cm; font-size: 100%">
+                                        <td style="width: 2cm; font-size: 90%">
                                             <span t-field="l.quantity" t-options="{'widget': 'float', 'precision': 2}"/>
                                         </td>
+                                         <td style="width: 4cm; font-size: 90%">
+                                            codigo
+                                        </td>
 
-                                        <td style="width: 10.4cm; font-size: 100%">
+                                        <td style="width: 12cm; font-size: 90%">
                                             <span t-esc="producto(l.name)[0:51]"/>
                                         </td>
-                                        <td style="width: 2cm; font-size: 100%;text-align: right">
+                                        <td style="width: 2cm; font-size: 90%;text-align: right">
                                             <span t-field="l.price_unit" t-options="{'widget': 'monetary', 'display_currency': o.currency_id}"/>
                                         </td>
-                                        <td style="width: 6.2cm; font-size: 100%" class="text-right">
+                                        <td style="width: 6.2cm; font-size: 90%" class="text-right">
                                             <span t-esc="total_linea(l)" t-options="{'widget': 'monetary', 'display_currency': o.currency_id}"/>
                                         </td>
                                     </tr>
@@ -71,23 +70,23 @@
 
 
 
-                        <div style="position: absolute; top: 27cm; left: 21.2cm; font-size: 100%">
+                        <div style="position: absolute; top: 14cm; left: 25.5cm; font-size: 90%">
                             <span t-field="o.amount_total" t-options="{'widget': 'monetary', 'display_currency': o.currency_id}"/>
                         </div>
-                        <div style="font-size: 110%; text-transform: uppercase; position: absolute; top: 28cm; left: 2.5cm; width: 20cm">
+                        <div style="font-size: 90%; text-transform: uppercase; position: absolute; top: 14cm; left: 2.5cm; width: 20cm">
                             <span t-esc="a_letras.num_a_letras(o.amount_total)"/>
                         </div>
 
-                        <div style="font-size: 90%; text-transform: uppercase; position: absolute; top: 29.4cm; left: 21.2cm">
+                        <div style="font-size: 90%; text-transform: uppercase; position: absolute; top: 14.5cm; left: 25.5cm">
                             <span t-field="o.amount_untaxed" t-options="{'widget': 'monetary', 'display_currency': o.currency_id}"/>
                         </div>
 
 
-                        <div style="position: absolute; top: 30cm; left: 21.2cm; font-size: 100%">
+                        <div style="position: absolute; top: 15cm; left: 25.5cm; font-size: 90%">
                             <span t-esc="valor_retencion_iva(o)"/>
                         </div>
 
-                        <div style="position: absolute; top: 27.8cm; left: 21.2cm; font-size: 100%">
+                        <div style="position: absolute; top: 16cm; left: 25.5cm; font-size: 90%">
                             <span t-esc="venta_total(o)" t-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: o.currency_id}"/>
                         </div>
 
