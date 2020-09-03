@@ -11,5 +11,14 @@
             name="onlife.reporte_account_invoice1"
         />
 
+        <report
+            id="onlife_account_invoice2"
+            string="F. VENTAS SUJETAS"
+            model="account.move"
+            report_type="qweb-pdf"
+            file="onlife.reporte_account_invoice2"
+            name="onlife.reporte_account_invoice2"
+        />
+
     </data>
 </odoo>
