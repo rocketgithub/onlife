@@ -15,23 +15,23 @@
                         <div style="position: absolute; top: 4.6cm; left: 22cm; font-size: 90%">
                             <span t-esc="o.invoice_date.year if o.invoice_date else ''"/>
                         </div>
-                        
+
 
 
                     <div style="position: absolute; top: 4.6cm; left: 3cm; font-size: 90%">
                         <span style="font-family: monospace!important" t-field="o.partner_id.name"/>
                     </div>
-                    
+
                     <div style="position: absolute; top: 5.1cm; left: 3cm; font-size: 90%; width: 9cm">
                          <span t-esc="o.partner_id.street"/>
                     </div>
                     <div style="font-size: 90%; text-transform: uppercase; position: absolute; top: 5.6cm; left: 3cm">
-                      municipio
+                        <span t-esc="o.partner_id.street2"/>
                     </div>
                     <div style="font-size: 90%; text-transform: uppercase; position: absolute; top: 6.1cm; left: 3.8cm">
                       <span t-esc="o.partner_id.city"/>
                     </div>
-                    
+
 
                       <div style="position: absolute; top: 5.1cm; left: 20cm; font-size: 90%">
                         <span t-field="o.partner_id.vat"/>
@@ -46,7 +46,7 @@
                     <div style="position: absolute; top: 6.6cm; left: 22.5cm; font-size: 90%">
                         <span t-field="o.invoice_payment_term_id.name"/>
                     </div>
-                    
+
 
 
 
