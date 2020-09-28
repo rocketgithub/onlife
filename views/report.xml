@@ -3,7 +3,7 @@
     <data>
 
         <report
-            id="onlife_account_invoice2"
+            id="onlife_account_invoice1"
             string="FACTURA ONLIFE"
             model="account.move"
             report_type="qweb-pdf"
