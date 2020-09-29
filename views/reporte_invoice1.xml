@@ -16,7 +16,7 @@
                             <span t-esc="o.invoice_date.year if o.invoice_date else ''"/>
                         </div>
 
-                        <div style="position: absolute; top: 3.7cm; left: 2.5cm; font-size: 90%">
+                        <div style="position: absolute; top: 3.7cm; left: 2.5cm; font-size: 90%; width: 15cm">
                             <span style="font-family: monospace!important" t-field="o.partner_id.name"/>
                         </div>
                         <div style="position: absolute; top: 3.7cm; left: 11cm; font-size: 90%; width: 14.5cm">
@@ -26,15 +26,15 @@
                         <div style="position: absolute; top: 3.7cm; left: 16cm; font-size: 90%">
                             <span t-field="o.partner_id.vat"/>
                         </div>
-                        <div style="position: absolute; top: 4.4cm; left: 10cm; font-size: 90%; width: 8cm">
+                        <div style="position: absolute; top: 4.4cm; left: 10cm; font-size: 90%; width: 5cm">
                             <span t-esc="o.partner_id.street"/>
                         </div>
                         <div style="position: absolute; top: 4.4cm; left: 2.5cm; font-size: 90%; width: 9cm">
-                            No.ident
+                            <span t-esc="o.partner_id.dui"/>
                         </div>                        
 
                         <div style="font-size: 90%; text-transform: uppercase; position: absolute; top: 4.4cm; left: 15cm">
-                            departamento
+                            <span t-esc="o.partner_id.street2"/>
                         </div>
                         
                         
