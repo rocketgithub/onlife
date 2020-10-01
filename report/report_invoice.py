@@ -25,7 +25,7 @@ class ReportAbstractInvoice(models.AbstractModel):
         currency = l.move_id and l.move_id.currency_id or None
         price_unit = l.price_unit * (1 - (l.discount or 0.0) / 100.0)
         taxes = l.tax_ids.compute_all(price_unit, currency, l.quantity, l.product_id, l.move_id.partner_id)
-        price_total = l.price_total
+        price_total = l.price_subtotal
         for tax in taxes['taxes']:
             if tax['name'] == 'Timbre de Prensa Ventas':
                 price_total -= tax['amount']
