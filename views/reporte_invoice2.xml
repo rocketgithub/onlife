@@ -74,21 +74,19 @@
 
 
 
-                    <div style="position: absolute; top: 12cm; left: 25.5cm; font-size: 90%">
-                        <span t-field="o.amount_total" t-options="{'widget': 'monetary', 'display_currency': o.currency_id}"/>
-                    </div>
-                    <div style="font-size: 90%; text-transform: uppercase; position: absolute; top: 15.5cm; left: 3.5cm; width: 20cm">
-                        <span t-esc="a_letras.num_a_letras(o.amount_total)"/>
-                    </div>
                     <div style="font-size: 90%; text-transform: uppercase; position: absolute; top: 12.5cm; left: 25.5cm">
-                        <span t-field="o.amount_tax" t-options="{'widget': 'monetary', 'display_currency': o.currency_id}"/>
-                    </div>
-                    <div style="font-size: 90%; text-transform: uppercase; position: absolute; top: 13cm; left: 25.5cm">
                         <span t-field="o.amount_untaxed" t-options="{'widget': 'monetary', 'display_currency': o.currency_id}"/>
                     </div>
-                    <div style="position: absolute; top: 13.5cm; left: 25.5cm; font-size: 90%">
-                    <span t-esc="valor_retencion_iva(o)"/>
+                    <div style="font-size: 90%; text-transform: uppercase; position: absolute; top: 13cm; left: 25.5cm">
+                        <span t-field="o.amount_tax" t-options="{'widget': 'monetary', 'display_currency': o.currency_id}"/>
                     </div>
+                    <div style="position: absolute; top: 13.5cm; left: 25.5cm; font-size: 90%">
+                        <span t-field="o.amount_total" t-options="{'widget': 'monetary', 'display_currency': o.currency_id}"/>
+                    </div>
+                    <div style="font-size: 90%; text-transform: uppercase; position: absolute; top: 13.5cm; left: 3.5cm; width: 20cm">
+                        <span t-esc="a_letras.num_a_letras(o.amount_total)"/>
+                    </div>
+                    
 
                      <div style="position: absolute; top: 14.5cm; left: 25.5cm; font-size: 90%">
                             <span t-esc="venta_total(o)" t-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: o.currency_id}"/>
