@@ -77,9 +77,7 @@
                         </div>
 
 
-                        <div style="position: absolute; top: 15cm; left: 25.5cm; font-size: 90%">
-                            <span t-esc="valor_retencion_iva(o)"/>
-                        </div>
+                        
 
                         <div style="position: absolute; top: 16cm; left: 25.5cm; font-size: 90%">
                             <span t-esc="venta_total(o)" t-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: o.currency_id}"/>
