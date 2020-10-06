@@ -21,7 +21,7 @@ class ReportAbstractInvoice(models.AbstractModel):
                 price_total -= tax['amount']
         return price_total
 
-    def total_linea_con_impuesto(self, l):
+    def total_linea_sin_impuesto(self, l):
         currency = l.move_id and l.move_id.currency_id or None
         price_unit = l.price_unit * (1 - (l.discount or 0.0) / 100.0)
         taxes = l.tax_ids.compute_all(price_unit, currency, l.quantity, l.product_id, l.move_id.partner_id)
@@ -167,7 +167,7 @@ class ReportAbstractInvoice(models.AbstractModel):
             'impuesto_impresos': self.impuesto_impresos,
             'valor_retencion_iva': self.valor_retencion_iva,
             'venta_total': self.venta_total,
-            'total_linea_con_impuesto': self.total_linea_con_impuesto,
+            'total_linea_sin_impuesto': self.total_linea_sin_impuesto,
             'descuento_report6': self.descuento_report6,
             'lineas_report6': self.lineas_report6,
             'lineas_report7': self.lineas_report7,

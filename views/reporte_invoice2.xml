@@ -62,10 +62,10 @@
                                         <span t-esc="producto(l.name)[0:51]"/>
                                     </td>
                                     <td style="width: 3.5cm; font-size: 90%;text-align: right">
-                                        <span t-field="l.price_unit" t-options="{'widget': 'monetary', 'display_currency': o.currency_id}"/>
+                                        <span t-esc="total_linea_sin_impuesto(l)/l.quantity" t-options="{'widget': 'monetary', 'display_currency': o.currency_id}"/>
                                     </td>
                                     <td style="width: 6.5cm; font-size: 90%" class="text-right">
-                                        <span t-esc="total_linea_con_impuesto(l)" t-options="{'widget': 'monetary', 'display_currency': o.currency_id}"/>
+                                        <span t-esc="total_linea_sin_impuesto(l)" t-options="{'widget': 'monetary', 'display_currency': o.currency_id}"/>
                                     </td>
                                 </tr>
                             </tbody>
