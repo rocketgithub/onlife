@@ -72,9 +72,7 @@
                             <span t-esc="a_letras.num_a_letras(o.amount_total)"/>
                         </div>
 
-                        <div style="font-size: 90%; text-transform: uppercase; position: absolute; top: 14.5cm; left: 25.5cm">
-                            <span t-field="o.amount_untaxed" t-options="{'widget': 'monetary', 'display_currency': o.currency_id}"/>
-                        </div>
+                        
 
 
                         
