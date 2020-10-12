@@ -185,3 +185,9 @@ class ReportInvoice2(models.AbstractModel):
     _inherit = 'onlife.abstract.reporte_account_invoice'
 
     nombre_reporte = 'onlife.reporte_account_invoice2'
+
+class ReportInvoiceTicket(models.AbstractModel):
+    _name = 'report.onlife.reporte_account_invoice_ticket'
+    _inherit = 'onlife.abstract.reporte_account_invoice'
+
+    nombre_reporte = 'onlife.reporte_account_invoice_ticket'
