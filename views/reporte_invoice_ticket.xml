@@ -12,8 +12,8 @@
                             <span t-field="o.company_id.website"/><br/><br/>
                             HUMAN TECH, S.A. DE C.V.<br/><br/>
                             <span t-field="o.company_id.street"/><br/><br/>
-                            Giro: <span t-field="o.partner_id.giro_negocio_id"/><br/><br/>
-                            Nit: <span t-field="o.partner_id.vat"/><br/><br/>
+                            Giro: <span t-field="o.company_id.partner_id.giro_negocio_id"/><br/><br/>
+                            Nit: <span t-field="o.company_id.partner_id.vat"/> NRC: <span t-field="o.company_id.partner_id.numero_registro"/><br/><br/>
                             Resolución No.: <span t-field="o.journal_id.resolucion"/><br/><br/>
                             Serie: <span t-field="o.journal_id.serie"/><br/><br/>
                             Del: <span t-field="o.journal_id.rango_inicio"/> AL <span t-field="o.journal_id.rango_fin"/><br/>
@@ -38,10 +38,10 @@
                                         <span style="float:right" t-field="o.amount_total" t-options="{'widget': 'monetary', 'display_currency': o.currency_id}"/>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr t-foreach="o._get_reconciled_info_JSON_values()" t-as="p">
                                     <td>
-                                        <span style="float:left">Banco</span>
-                                        <span style="float:right" t-field="o.amount_total" t-options="{'widget': 'monetary', 'display_currency': o.currency_id}"/>
+                                        <span style="float:left" t-esc="p['journal_name']"/>
+                                        <span style="float:right" t-esc="p['amount']" t-options="{'widget': 'monetary', 'display_currency': o.currency_id}"/>
                                     </td>
                                 </tr>
                             </tbody>
