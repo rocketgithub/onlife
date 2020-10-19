@@ -23,16 +23,16 @@
                             <span t-field="o.partner_id.numero_registro"/>
                         </div>
 
-                        
+
                         <div style="position: absolute; top: 4.4cm; left: 2.5cm; font-size: 90%; width: 9cm">
                             <span t-esc="o.partner_id.dui"/>
-                        </div>                        
+                        </div>
 
                         <div style="font-size: 90%; text-transform: uppercase; position: absolute; top: 4.4cm; left: 15cm">
                             <span t-esc="o.partner_id.street2"/>
                         </div>
-                        
-                        
+
+
 
 
 
@@ -46,7 +46,7 @@
                                             <span t-field="l.quantity" t-options="{'widget': 'float', 'precision': 2}"/>
                                         </td>
                                          <td style="width: 4cm; font-size: 90%">
-                                            codigo
+                                             <span t-field="l.product_id.default_code"/>
                                         </td>
 
                                         <td style="width: 12cm; font-size: 90%">
@@ -72,10 +72,10 @@
                             <span t-esc="a_letras.num_a_letras(o.amount_total)"/>
                         </div>
 
-                        
 
 
-                        
+
+
 
                         <div style="position: absolute; top: 16cm; left: 25.5cm; font-size: 90%">
                             <span t-esc="venta_total(o)" t-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: o.currency_id}"/>
