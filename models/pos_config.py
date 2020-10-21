@@ -7,7 +7,7 @@ class PosConfig(models.Model):
 
     invoice_journal_ids = fields.Many2many('account.journal', string='Diarios de factura')
 
-    def obtener_diarios(self, condiciones, campos):
-        config = self.env['account.journal'].sudo().search_read(condiciones, [])
+    def obtener_diarios(self, filtro, campos):
+        config = self.env['account.journal'].sudo().search_read(filtro, [])
         return config
 
