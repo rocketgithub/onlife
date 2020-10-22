@@ -14,7 +14,7 @@
     'category': 'Uncategorized',
     'version': '0.1',
 
-    'depends': ['base','account','l10n_sv'],
+    'depends': ['base','account','l10n_sv', 'point_of_sale'],
 
     'data': [
         'views/report.xml',
@@ -22,5 +22,10 @@
         'views/reporte_invoice2.xml',
         'views/reporte_invoice_ticket.xml',
         'views/res_partner_views.xml',
+        'views/pos_config_view.xml',
+        'views/templates.xml',
+    ],
+    'qweb': [
+        'static/src/xml/onlife.xml',
     ],
 }
