@@ -22,10 +22,5 @@
         'views/reporte_invoice2.xml',
         'views/reporte_invoice_ticket.xml',
         'views/res_partner_views.xml',
-        'views/pos_config_view.xml',
-        'views/templates.xml',
-    ],
-    'qweb': [
-        'static/src/xml/onlife.xml',
     ],
 }
