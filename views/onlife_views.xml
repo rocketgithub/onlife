@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="onlife_view_campo_personalizado_form" model="ir.ui.view">
+        <field name="name">onlife.campo_personalizado.form</field>
+        <field name="model">onlife.campo_personalizado</field>
+        <field name="arch" type="xml">
+            <form string="Campos personalizados">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="onlife_view_campo_personalizado_tree" model="ir.ui.view">
+        <field name="name">onlife.campo_personalizado.tree</field>
+        <field name="model">onlife.campo_personalizado</field>
+        <field name="arch" type="xml">
+           <tree string="Campos personalizados">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="act_onlife_campo_personalizado_view" model="ir.actions.act_window">
+        <field name="name">Campos personalizados</field>
+        <field name="res_model">onlife.campo_personalizado</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="onlife_view_campo_personalizado_tree"/>
+    </record>
+
+    <menuitem
+        id="menu_act_onlife_campo_personalizado"
+        name="Campos personalizados"
+        action="act_onlife_campo_personalizado_view"
+        parent="sale.product_menu_catalog"
+        sequence="50"
+        />
+
+    <record id="onlife_view_laboratorio_form" model="ir.ui.view">
+        <field name="name">onlife.laboratorio.form</field>
+        <field name="model">onlife.laboratorio</field>
+        <field name="arch" type="xml">
+            <form string="Laboratorios">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="onlife_view_laboratorio_tree" model="ir.ui.view">
+        <field name="name">onlife.laboratorio.tree</field>
+        <field name="model">onlife.laboratorio</field>
+        <field name="arch" type="xml">
+           <tree string="Laboratorios">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="act_onlife_laboratorio_view" model="ir.actions.act_window">
+        <field name="name">Laboratorios</field>
+        <field name="res_model">onlife.laboratorio</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="onlife_view_laboratorio_tree"/>
+    </record>
+
+    <menuitem
+        id="menu_act_onlife_laboratorio"
+        name="Laboratorios"
+        action="act_onlife_laboratorio_view"
+        parent="sale.product_menu_catalog"
+        sequence="51"
+        />
+
+</odoo>

@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_onlife_laboratorio_salesman,onlife.laboratorio.salesman,onlife.model_onlife_laboratorio,sales_team.group_sale_salesman_all_leads,1,1,1,1
+access_onlife_campo_personalizado_manager,onlife.campo_personalizado.manager,onlife.model_onlife_campo_personalizado,sales_team.group_sale_manager,1,1,1,1
+access_onlife_producto_campo_personalizado_manager,onlife.producto_campo_personalizado.manager,onlife.model_onlife_producto_campo_personalizado,sales_team.group_sale_salesman_all_leads,1,1,1,1
