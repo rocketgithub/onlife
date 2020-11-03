@@ -22,8 +22,5 @@
         'views/reporte_invoice2.xml',
         'views/reporte_invoice_ticket.xml',
         'views/res_partner_views.xml',
-        'views/onlife_views.xml',
-        'views/product_template_views.xml',
-        'security/ir.model.access.csv',
     ],
 }
