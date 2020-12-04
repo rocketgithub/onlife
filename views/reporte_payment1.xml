@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="reporte_account_payment1">
+        <t t-call="web.html_container">
+            <t t-set="data_report_margin_top" t-value="12"/>
+            <t t-set="data_report_header_spacing" t-value="9"/>
+            <t t-set="data_report_dpi" t-value="110"/>
+            <t t-foreach="docs" t-as="o">
+                <div class="article">
+                    <div class="page">
+
+                        <div style="font-size: 110%; position: absolute; top: 0.75cm; left: 6.0cm">
+                            GUATEMALA, <span t-field="o.payment_date"/>
+                        </div>
+                        <div style="font-size: 110%; position: absolute; top: 0.75cm; left: 16cm">
+                            <span t-esc="'{0:,.2f}'.format(o.amount)"/>
+                        </div>
+                        <div style="font-size: 110%; position: absolute; top: 1.30cm; left: 3.4cm; width: 15cm">
+                            <span t-esc="o.partner_id.name"/>
+                        </div>
+                        <div style="font-size: 110%; position: absolute; top: 2cm; left: 2.5cm; width: 15cm">
+                            <span t-esc="a_letras.num_a_letras(o.amount)"/>
+                        </div>
+    		            <div t-if="o.no_negociable == True" style="font-size: 110%; position: absolute; top: 5.5cm; left: 4.4cm">
+                               <span>NO  NEGOCIABLE</span>
+                        </div>
+
+                    </div>
+                </div>
+            </t>
+        </t>
+    </template>
+</odoo>

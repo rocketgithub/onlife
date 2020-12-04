@@ -46,5 +46,14 @@
             paperformat="paperformat_ticket"
         />
 
+        <report
+            id="onlife_account_payment1"
+            string="Cheque BAC"
+            model="account.payment"
+            report_type="qweb-pdf"
+            file="onlife.reporte_account_payment1"
+            name="onlife.reporte_account_payment1"
+        />
+
     </data>
 </odoo>
