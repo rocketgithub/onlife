@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from odoo import api, models
-import odoo.addons.l10n_gt_extra.a_letras
+import odoo.addons.l10n_sv.a_letras
 
 class ReportAbstractPayment(models.AbstractModel):
     _name = 'onlife.abstract.reporte_account_payment'
