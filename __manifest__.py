@@ -12,7 +12,7 @@
     'website': "http://www.aquih.com",
 
     'category': 'Uncategorized',
-    'version': '0.1',
+    'version': '14.0.1.1',
 
     'depends': ['base','account','l10n_sv', 'point_of_sale'],
 
