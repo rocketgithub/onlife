@@ -16,7 +16,7 @@ class ReportAbstractPayment(models.AbstractModel):
             'doc_ids': docids,
             'doc_model': self.model,
             'docs': docs,
-            'a_letras': odoo.addons.l10n_gt_extra.a_letras,
+            'a_letras': odoo.addons.l10n_sv.a_letras,
         }
 
 class ReportPayment1(models.AbstractModel):
