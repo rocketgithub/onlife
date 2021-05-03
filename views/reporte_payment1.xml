@@ -21,9 +21,11 @@
                         <div style="font-size: 110%; position: absolute; top: 2cm; left: 2.5cm; width: 15cm">
                             <span t-esc="a_letras.num_a_letras(o.amount)"/>
                         </div>
+                        <!--
     		            <div t-if="o.no_negociable == True" style="font-size: 110%; position: absolute; top: 5.5cm; left: 4.4cm">
                                <span>NO  NEGOCIABLE</span>
                         </div>
+                        -->
 
                     </div>
                 </div>
