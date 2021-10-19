@@ -23,5 +23,6 @@
         'views/reporte_invoice_ticket.xml',
         'views/reporte_payment1.xml',
         'views/res_partner_views.xml',
+        'views/purchase_views.xml',
     ],
 }
