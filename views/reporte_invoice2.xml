@@ -53,7 +53,7 @@
                     <div style="position: absolute; top: 8.5cm; left: 2cm">
                         <table>
                             <tbody>
-                                <tr t-foreach="o.invoice_line_ids" t-as="l">
+                                <tr t-foreach="o.invoice_line_ids.filtered(lambda l: l.quantity != 0)" t-as="l">
                                     <td style="width: 4cm; font-size: 90%">
                                         <span t-field="l.quantity" t-options="{'widget': 'float', 'precision': 2}"/>
                                     </td>
